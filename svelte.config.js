@@ -20,6 +20,7 @@ const config = {
 			entries: [
 				"/", // todo:
 				"/2024", // todo:
+				"/2024/notes", // todo:
 				...artists2024.map((_s, i) => `/2024/${i}`)
 			]
 		}
