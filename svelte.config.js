@@ -1,7 +1,7 @@
-import { mdsvex } from 'mdsvex';
-import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import { songs2024 } from './src/lib/notes/2024/songs.js';
+import { mdsvex } from "mdsvex";
+import adapter from "@sveltejs/adapter-static";
+import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import { artists2024 } from "./src/lib/notes/2024/artists.js";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,17 +14,21 @@ const config = {
 		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter({
-			fallback: '404.html'
+			fallback: "404.html"
 		}),
 		prerender: {
-			entries: ['/', '/2024', ...songs2024.map((s, i) => `/2024/${i}`)]
+			entries: [
+				"/", // todo:
+				"/2024", // todo:
+				...artists2024.map((_s, i) => `/2024/${i}`)
+			]
 		},
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+			base: process.argv.includes("dev") ? "" : process.env.BASE_PATH
 		}
 	},
 
-	extensions: ['.svelte', '.svx']
+	extensions: [".svelte", ".svx"]
 };
 
 export default config;
