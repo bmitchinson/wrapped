@@ -1,7 +1,7 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import { songs2024 } from './src/notes/2024/songs.js';
+import { songs2024 } from './src/lib/notes/2024/songs.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -17,7 +17,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		prerender: {
-			entries: ['/', ...songs2024.map((s, i) => `/2024/${i}`)]
+			entries: ['/', '/2024', ...songs2024.map((s, i) => `/2024/${i}`)]
 		},
 		paths: {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH

@@ -2,8 +2,8 @@
 	import { linkClasses } from '$lib/cssUtils';
 </script>
 
-<div class="w-72 space-y-4">
-	<p class="font-bold text-lg">Favorite music + notes from 2024</p>
+<div class="w-72 gap-4">
+	<div class="font-bold text-lg">Favorite music + notes from 2024</div>
 	<p>
 		my spotify top 100 -
 		<a
@@ -35,9 +35,9 @@
 				>
 			</summary>
 
-			<ul class="list-disc list-inside mt-2 space-y-2">
+			<ul class="list-disc list-inside mt-2 p-0 space-y-2">
 				<li class="">
-					You listened to 5 artists this month? Your streaming $$$ should automatically go to the
+					If you listen to 5 artists in a month, your streaming $$$ should automatically go to the
 					app and those 5 artists only
 				</li>
 				<li class="">

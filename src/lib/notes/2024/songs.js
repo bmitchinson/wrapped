@@ -1,7 +1,7 @@
 export const songs2024 = [
 	{
 		ytId: 'gEmxGB40ipo',
-		name: 'Mary in the Junkyard',
+		title: 'Mary in the Junkyard',
 		artist: 'Marble Arch',
 		year: '2024',
 		notes: [
