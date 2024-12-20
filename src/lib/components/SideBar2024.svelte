@@ -1,10 +1,9 @@
 <script>
-	import { linkClasses } from '$lib/cssUtils';
+	import { linkClasses } from "$lib/cssUtils";
 </script>
 
-<div class="w-72 gap-4">
-	<div class="font-bold text-lg">Favorite music + notes from 2024</div>
-	<p>
+<div class="flex flex-col w-72 gap-2">
+	<div>
 		my spotify top 100 -
 		<a
 			class={linkClasses}
@@ -16,16 +15,16 @@
 		<a class={linkClasses} href="https://music.apple.com/us/playlist/2024/pl.u-8aAVXZjT4Z"
 			>youtube</a
 		>
-	</p>
+	</div>
 
-	<p>
+	<div>
 		Import from bandcamp into spotify - <a
 			class={linkClasses}
 			href="https://support.spotify.com/us/article/local-files/">guide</a
 		>
 		<br />
 		If you love a song consider buying it on bandcamp
-	</p>
+	</div>
 	<div>
 		<details>
 			<summary

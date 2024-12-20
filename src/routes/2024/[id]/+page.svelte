@@ -24,7 +24,7 @@
 			localStorage.setItem("visited", JSON.stringify([data.id]));
 		} else {
 			let visited = JSON.parse(visitedOnLoad) as Array<Number>;
-			visited.push(data.id);
+			!visited.includes(data.id) && visited.push(data.id);
 			if (visited.length >= artists2024.length) {
 				localStorage.setItem("unlock1", Date.now().toString());
 				visited = [data.id];
@@ -46,43 +46,50 @@
 	});
 </script>
 
-<div class="flex flex-row flex-wrap p-8 justify-center gap-16">
+<div
+	class="flex flex-row flex-wrap ph-8 mt-4 md:mt-16 justify-center items-center gap-x-16 gap-y-8"
+>
 	<SideBar2024 />
 
-	<div class="w-96 flex flex-col">
-		<div class="text-lg flex flex-col align-base text-left">
-			<div class="flex flex-row">
-				<div class="font-bold mr-2">artist:</div>
-				<div>{song.artist}</div>
-			</div>
-			{#if song.social}
-				<div class="">
-					<a class={linkClasses} href={song.social}>{song.social}</a>
-				</div>
-			{/if}
-			{#each song.tracks as track}
-				<div class="flex flex-row">
-					<div class="font-bold mr-2">title:</div>
-					<div>{track.year ? `${track.title} - ${track.year}` : track.title}</div>
-				</div>
+	<div class="w-96 max-w-[85vw] flex flex-col items-center">
+		<div class="flex flex-col max-h-[24rem] overflow-scroll">
+			<div class="text-lg flex flex-col align-base text-left">
+				{#each song.tracks as track}
+					<Youtube videoID={track.ytId} />
 
-				<Youtube videoID={track.ytId} />
-			{/each}
-		</div>
-
-		<div class="mt-4">
-			<ul class="list-disc list-inside mt-2 p-0 space-y-2">
-				{#each song.notes as note}
-					<li class="p-0">{@html note}</li>
+					<div class="flex flex-row">
+						<div class="font-bold mr-2">title:</div>
+						<div>{track.year ? `${track.title} - ${track.year}` : track.title}</div>
+					</div>
 				{/each}
-			</ul>
-			{#each song.images as img}
-				<img class="w-full" src={img.src} />
-			{/each}
-			<button onclick={anotherSongClick} class="align-right max-w-32">Another Song</button>
-			<button id="unlock1ele" onclick={() => (location.href = "/2024/notes")} class="hidden"
-				>Recordings / Photos</button
-			>
+				<div class="flex flex-row">
+					<div class="font-bold mr-2">artist:</div>
+					<div>{song.artist}</div>
+				</div>
+				{#if song.social}
+					<div class="">
+						<a class={linkClasses} href={song.social}>{song.social}</a>
+					</div>
+				{/if}
+			</div>
+
+			<div class="mt-4">
+				<ul class="list-disc list-inside mt-2 p-0 space-y-2">
+					{#each song.notes as note}
+						<li class="p-0">{@html note}</li>
+					{/each}
+				</ul>
+				{#each song.images as img}
+					<img class="w-full" src={img.src} />
+				{/each}
+				<div class="flex flex-row justify-center gap-x-6">
+					<button onclick={anotherSongClick} class="align-right h-8">View Another Song</button>
+					<button id="unlock1ele" onclick={() => (location.href = "/2024/notes")} class="hidden"
+						>View Recordings / Photos</button
+					>
+				</div>
+			</div>
 		</div>
+		<div class="hidden md:block mt-6 text-gray-500 italic">( Scrollable ^ )</div>
 	</div>
 </div>

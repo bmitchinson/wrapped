@@ -29,7 +29,7 @@
 <h2>recordings</h2>
 
 <audio controls>
-	<source src="/2024/707_18th_St_4.m4a" type="audio/mpeg" />
+	<source src="/2024/707_18th_St_4.mp3" type="audio/mpeg" />
 </audio>
 <p>Didn't record much this year</p>
 
