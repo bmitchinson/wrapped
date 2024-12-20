@@ -12,8 +12,9 @@
 			spotify</a
 		>
 		-
-		<a class={linkClasses} href="https://music.apple.com/us/playlist/2024/pl.u-8aAVXZjT4Z"
-			>youtube</a
+		<a
+			class={linkClasses}
+			href="https://www.youtube.com/playlist?list=PLhalHOaCa9Wg_YejtyTCZafLdSLeywscX">youtube</a
 		>
 	</div>
 
