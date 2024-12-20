@@ -13,7 +13,6 @@
 <p>postal service themselves</p>
 
 <img src="/2024/1.jpeg" class="md:max-w-md max-w-[80%] h-auto" />
-<p>porter postal service cover</p>
 
 <img src="/2024/7.png" class="md:max-w-md max-w-[80%] h-auto" />
 <p>mk.gee chicago</p>
