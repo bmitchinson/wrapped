@@ -83,7 +83,7 @@ export const artists2024 = [
 		notes: [
 			"Baseline going minor at the end of the phrase is so fucking weird inject that into my veins please.",
 			"So good at using his voice like a rhythm instrument against the drums. Top 5 album of the year for me",
-			"Loved listening to it at release walking a lap around the park at night near alex and I's drake house",
+			"Loved listening to it at release walking a lap around the park at night near Alex and I's drake house",
 			"Thanks to derek for letting me tag along for the show"
 		],
 		social: "",
