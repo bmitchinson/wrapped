@@ -22,9 +22,6 @@ const config = {
 				"/2024", // todo:
 				...artists2024.map((_s, i) => `/2024/${i}`)
 			]
-		},
-		paths: {
-			base: process.argv.includes("dev") ? "" : process.env.BASE_PATH
 		}
 	},
 
