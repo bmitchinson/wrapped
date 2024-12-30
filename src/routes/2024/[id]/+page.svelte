@@ -25,7 +25,7 @@
 		} else {
 			let visited = JSON.parse(visitedOnLoad) as Array<Number>;
 			!visited.includes(data.id) && visited.push(data.id);
-			if (visited.length >= artists2024.length) {
+			if (visited.length >= 8) {
 				localStorage.setItem("unlock1", Date.now().toString());
 				visited = [data.id];
 			}
